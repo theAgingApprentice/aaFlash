@@ -51,7 +51,7 @@ time the **main** branch gets updated. The output from Doxygen is placed in the
 [Github Pages](https://pages.github.com/) site that contains all of the Doxygen
 tags and assorted embedded comments from the code itself. This documentation 
 can be viewed in your web browser 
-[here](https://theagingapprentice.github.io/aaChip/html/).    
+[here](https://theagingapprentice.github.io/aaFlash/html/index.html).    
 
 ## Microprocessor compatibility
 This library has only been tested on the 
