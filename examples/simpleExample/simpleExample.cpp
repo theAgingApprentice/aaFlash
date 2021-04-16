@@ -1,7 +1,7 @@
 /******************************************************************************
- * @file callAllExample.cpp
+ * @file simpleExample.cpp
  *
- * @page Example sketch showing how to use the aaChip class. 
+ * @page Example sketch showing how to use the aaCFlash class. 
  * 
  * @section intro_sec Introduction
  *
@@ -43,12 +43,12 @@
  * IN THE SOFTWARE.  
  *****************************************************************************/ 
 #include <Arduino.h> // Arduino Core for ESP32. Comes with Platform.io.
-#include <aaStringQueue.h> // Required for retrieving CPU details.
+#include <aaFlash.h> // Required for retrieving CPU details.
 
 /**
  * Define global objects.
  * =================================================================================*/
-aaStringQueue cmdQueue; // Instantiate the command queue.
+aaFlash cmdQueue; // Instantiate the command queue.
 
 /**
  * @brief Initialize the serial output with the specified baud rate measured in bits 
