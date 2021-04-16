@@ -3,119 +3,62 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classaa_flash_a8f50d95139c414ef74527302708a6e4f}\label{classaa_flash_a8f50d95139c414ef74527302708a6e4f}} 
-void {\bfseries cfg\+To\+Console} ()
+\mbox{\hyperlink{classaa_flash_a94a2822a455f5c0d39130305a78a952b}{aa\+Flash}} ()
 \item 
-const char $\ast$ \mbox{\hyperlink{classaa_flash_a5336ed26db363856d6c1fa1562668875}{get\+SDKVer}} ()
-\begin{DoxyCompactList}\small\item\em Returns the version number of the SDK used to build the binary. \end{DoxyCompactList}\item 
-const char $\ast$ \mbox{\hyperlink{classaa_flash_acda3b58ea5d2e58e64c772a640dee50a}{get\+Chip\+Model}} ()
-\begin{DoxyCompactList}\small\item\em Returns the revision number of the ESP32 chip. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{classaa_flash_a2aafe9428776eeb0a6225d9b98aa58d8}{get\+Chip\+Revision}} ()
-\begin{DoxyCompactList}\small\item\em Returns the revision number of the ESP32 chip. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{classaa_flash_a4afeea61128a2992341981e34e3bf96d}{get\+Serial\+Speed}} ()
-\begin{DoxyCompactList}\small\item\em Returns the current baud rate that the serial port is set to. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{classaa_flash_a6461c65d7ae0aa7803265c92002b18d9}{get\+Code\+Size}} ()
-\begin{DoxyCompactList}\small\item\em Returns the size of the binary file in bytes. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{classaa_flash_a420c037bda3fb035fbb1ae692980bfa7}{get\+Free\+Heap}} ()
-\begin{DoxyCompactList}\small\item\em Returns number of bytes of sorted memory the program can use. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{classaa_flash_a95384ed27fed2df98d07e23904be2fce}{get\+Cpu\+Id}} ()
-\begin{DoxyCompactList}\small\item\em Returns the CPU ID of the application core. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{classaa_flash_a159bf215b0a04bd8d0a36ae1f5ec152b}{get\+Cpu\+Clock}} ()
-\begin{DoxyCompactList}\small\item\em Returns the clock speed of the application core in Mhz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classaa_flash_a65cfd4cd0c1e2a6e4c92f3291927a53e}\label{classaa_flash_a65cfd4cd0c1e2a6e4c92f3291927a53e}} 
+{\bfseries aa\+Flash} (const char $\ast$var1)
+\item 
+\mbox{\hyperlink{classaa_flash_a40daf8addbf890ef3a37fbbabc639c50}{$\sim$aa\+Flash}} ()
+\item 
+IPAddress \mbox{\hyperlink{classaa_flash_a0d386a02b7310a745db4358a1acf7b44}{read\+Broker\+IP}} ()
+\begin{DoxyCompactList}\small\item\em Read MQTT broker IP address from flash memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaa_flash_aeab73dc549840e2e5edb2d901ee62c33}{write\+Broker\+IP}} (IPAddress address)
+\begin{DoxyCompactList}\small\item\em Write MQTT broker IP address to flash memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaa_flash_a94a2822a455f5c0d39130305a78a952b}\label{classaa_flash_a94a2822a455f5c0d39130305a78a952b}} 
+\index{aaFlash@{aaFlash}!aaFlash@{aaFlash}}
+\index{aaFlash@{aaFlash}!aaFlash@{aaFlash}}
+\doxysubsubsection{\texorpdfstring{aaFlash()}{aaFlash()}}
+{\footnotesize\ttfamily aa\+Flash\+::aa\+Flash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classaa_flash_autotoc_md17}{}\doxysubsection{@class Write variables to flash memory.}\label{classaa_flash_autotoc_md17}
+\mbox{\Hypertarget{classaa_flash_a40daf8addbf890ef3a37fbbabc639c50}\label{classaa_flash_a40daf8addbf890ef3a37fbbabc639c50}} 
+\index{aaFlash@{aaFlash}!````~aaFlash@{$\sim$aaFlash}}
+\index{````~aaFlash@{$\sim$aaFlash}!aaFlash@{aaFlash}}
+\doxysubsubsection{\texorpdfstring{$\sim$aaFlash()}{~aaFlash()}}
+{\footnotesize\ttfamily aa\+Flash\+::$\sim$aa\+Flash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classaa_flash_autotoc_md18}{}\doxysubsection{@brief This is the destructor for this class.}\label{classaa_flash_autotoc_md18}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classaa_flash_acda3b58ea5d2e58e64c772a640dee50a}\label{classaa_flash_acda3b58ea5d2e58e64c772a640dee50a}} 
-\index{aaFlash@{aaFlash}!getChipModel@{getChipModel}}
-\index{getChipModel@{getChipModel}!aaFlash@{aaFlash}}
-\doxysubsubsection{\texorpdfstring{getChipModel()}{getChipModel()}}
-{\footnotesize\ttfamily const char $\ast$ aa\+Flash\+::get\+Chip\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classaa_flash_a0d386a02b7310a745db4358a1acf7b44}\label{classaa_flash_a0d386a02b7310a745db4358a1acf7b44}} 
+\index{aaFlash@{aaFlash}!readBrokerIP@{readBrokerIP}}
+\index{readBrokerIP@{readBrokerIP}!aaFlash@{aaFlash}}
+\doxysubsubsection{\texorpdfstring{readBrokerIP()}{readBrokerIP()}}
+{\footnotesize\ttfamily IPAddress aa\+Flash\+::read\+Broker\+IP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Returns the revision number of the ESP32 chip. 
+Read MQTT broker IP address from flash memory. 
 
-\hypertarget{classaa_flash_autotoc_md19}{}\doxysubsection{@return uint32\+\_\+t ESP.\+get\+Chip\+Revision()}\label{classaa_flash_autotoc_md19}
-\mbox{\Hypertarget{classaa_flash_a2aafe9428776eeb0a6225d9b98aa58d8}\label{classaa_flash_a2aafe9428776eeb0a6225d9b98aa58d8}} 
-\index{aaFlash@{aaFlash}!getChipRevision@{getChipRevision}}
-\index{getChipRevision@{getChipRevision}!aaFlash@{aaFlash}}
-\doxysubsubsection{\texorpdfstring{getChipRevision()}{getChipRevision()}}
-{\footnotesize\ttfamily uint8\+\_\+t aa\+Flash\+::get\+Chip\+Revision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Returns the revision number of the ESP32 chip. 
-
-\hypertarget{classaa_flash_autotoc_md20}{}\doxysubsection{@return uint32\+\_\+t ESP.\+get\+Chip\+Revision()}\label{classaa_flash_autotoc_md20}
-\mbox{\Hypertarget{classaa_flash_a6461c65d7ae0aa7803265c92002b18d9}\label{classaa_flash_a6461c65d7ae0aa7803265c92002b18d9}} 
-\index{aaFlash@{aaFlash}!getCodeSize@{getCodeSize}}
-\index{getCodeSize@{getCodeSize}!aaFlash@{aaFlash}}
-\doxysubsubsection{\texorpdfstring{getCodeSize()}{getCodeSize()}}
-{\footnotesize\ttfamily uint32\+\_\+t aa\+Flash\+::get\+Code\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\hypertarget{classaa_flash_autotoc_md19}{}\doxysubsection{@return IPAddress Value read from flash memory.}\label{classaa_flash_autotoc_md19}
+\mbox{\Hypertarget{classaa_flash_aeab73dc549840e2e5edb2d901ee62c33}\label{classaa_flash_aeab73dc549840e2e5edb2d901ee62c33}} 
+\index{aaFlash@{aaFlash}!writeBrokerIP@{writeBrokerIP}}
+\index{writeBrokerIP@{writeBrokerIP}!aaFlash@{aaFlash}}
+\doxysubsubsection{\texorpdfstring{writeBrokerIP()}{writeBrokerIP()}}
+{\footnotesize\ttfamily void aa\+Flash\+::write\+Broker\+IP (\begin{DoxyParamCaption}\item[{IPAddress}]{address }\end{DoxyParamCaption})}
 
 
 
-Returns the size of the binary file in bytes. 
+Write MQTT broker IP address to flash memory. 
 
-\hypertarget{classaa_flash_autotoc_md21}{}\doxysubsection{@return uint32\+\_\+t ESP.\+get\+Sketch\+Size()}\label{classaa_flash_autotoc_md21}
-\mbox{\Hypertarget{classaa_flash_a159bf215b0a04bd8d0a36ae1f5ec152b}\label{classaa_flash_a159bf215b0a04bd8d0a36ae1f5ec152b}} 
-\index{aaFlash@{aaFlash}!getCpuClock@{getCpuClock}}
-\index{getCpuClock@{getCpuClock}!aaFlash@{aaFlash}}
-\doxysubsubsection{\texorpdfstring{getCpuClock()}{getCpuClock()}}
-{\footnotesize\ttfamily uint32\+\_\+t aa\+Flash\+::get\+Cpu\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Returns the clock speed of the application core in Mhz. 
-
-\hypertarget{classaa_flash_autotoc_md25}{}\doxysubsection{@return uint32\+\_\+t Serial.\+baud\+Rate()}\label{classaa_flash_autotoc_md25}
-\mbox{\Hypertarget{classaa_flash_a95384ed27fed2df98d07e23904be2fce}\label{classaa_flash_a95384ed27fed2df98d07e23904be2fce}} 
-\index{aaFlash@{aaFlash}!getCpuId@{getCpuId}}
-\index{getCpuId@{getCpuId}!aaFlash@{aaFlash}}
-\doxysubsubsection{\texorpdfstring{getCpuId()}{getCpuId()}}
-{\footnotesize\ttfamily uint32\+\_\+t aa\+Flash\+::get\+Cpu\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Returns the CPU ID of the application core. 
-
-\hypertarget{classaa_flash_autotoc_md24}{}\doxysubsection{@return uint32\+\_\+t x\+Port\+Get\+Core\+ID()}\label{classaa_flash_autotoc_md24}
-\mbox{\Hypertarget{classaa_flash_a420c037bda3fb035fbb1ae692980bfa7}\label{classaa_flash_a420c037bda3fb035fbb1ae692980bfa7}} 
-\index{aaFlash@{aaFlash}!getFreeHeap@{getFreeHeap}}
-\index{getFreeHeap@{getFreeHeap}!aaFlash@{aaFlash}}
-\doxysubsubsection{\texorpdfstring{getFreeHeap()}{getFreeHeap()}}
-{\footnotesize\ttfamily uint32\+\_\+t aa\+Flash\+::get\+Free\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Returns number of bytes of sorted memory the program can use. 
-
-\hypertarget{classaa_flash_autotoc_md22}{}\doxysubsection{@return uint32\+\_\+t ESP.\+get\+Free\+Heap()}\label{classaa_flash_autotoc_md22}
-\mbox{\Hypertarget{classaa_flash_a5336ed26db363856d6c1fa1562668875}\label{classaa_flash_a5336ed26db363856d6c1fa1562668875}} 
-\index{aaFlash@{aaFlash}!getSDKVer@{getSDKVer}}
-\index{getSDKVer@{getSDKVer}!aaFlash@{aaFlash}}
-\doxysubsubsection{\texorpdfstring{getSDKVer()}{getSDKVer()}}
-{\footnotesize\ttfamily const char $\ast$ aa\+Flash\+::get\+SDKVer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Returns the version number of the SDK used to build the binary. 
-
-\hypertarget{classaa_flash_autotoc_md18}{}\doxysubsection{@return cont char$\ast$ ESP.\+get\+Sdk\+Version()}\label{classaa_flash_autotoc_md18}
-\mbox{\Hypertarget{classaa_flash_a4afeea61128a2992341981e34e3bf96d}\label{classaa_flash_a4afeea61128a2992341981e34e3bf96d}} 
-\index{aaFlash@{aaFlash}!getSerialSpeed@{getSerialSpeed}}
-\index{getSerialSpeed@{getSerialSpeed}!aaFlash@{aaFlash}}
-\doxysubsubsection{\texorpdfstring{getSerialSpeed()}{getSerialSpeed()}}
-{\footnotesize\ttfamily uint32\+\_\+t aa\+Flash\+::get\+Serial\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Returns the current baud rate that the serial port is set to. 
-
-\hypertarget{classaa_flash_autotoc_md23}{}\doxysubsection{@return uint32\+\_\+t Serial.\+baud\+Rate()}\label{classaa_flash_autotoc_md23}
+\hypertarget{classaa_flash_autotoc_md20}{}\doxysubsection{@param IPAddress IP address to be written to flash memory.}\label{classaa_flash_autotoc_md20}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{aa_flash_8h}{aa\+Flash.\+h}}\item 
+src/aa\+Flash.\+h\item 
 src/aa\+Flash.\+cpp\end{DoxyCompactItemize}

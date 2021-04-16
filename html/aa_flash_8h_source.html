@@ -71,41 +71,39 @@ $(function() {
 <div class="title">aaFlash.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="aa_flash_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef aaFlash_h </span><span class="comment">// Start of precompiler code block. Avoid duplicate inclusion.</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define aaFlash_h </span><span class="comment">// Precompiler macro used for precompiler check.</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span> <span class="comment">// Arduino Core for ESP32. Comes with Platform.io</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classaa_flash.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaa_flash.html">aaFlash</a> <span class="comment">// Define aaFlash class </span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <a class="code" href="classaa_flash.html">aaFlash</a>(); <span class="comment">// Constructor</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordtype">void</span> cfgToConsole();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classaa_flash.html#a5336ed26db363856d6c1fa1562668875">getSDKVer</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classaa_flash.html#acda3b58ea5d2e58e64c772a640dee50a">getChipModel</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      uint8_t <a class="code" href="classaa_flash.html#a2aafe9428776eeb0a6225d9b98aa58d8">getChipRevision</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      uint32_t <a class="code" href="classaa_flash.html#a4afeea61128a2992341981e34e3bf96d">getSerialSpeed</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      uint32_t <a class="code" href="classaa_flash.html#a6461c65d7ae0aa7803265c92002b18d9">getCodeSize</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      uint32_t <a class="code" href="classaa_flash.html#a420c037bda3fb035fbb1ae692980bfa7">getFreeHeap</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      uint32_t <a class="code" href="classaa_flash.html#a95384ed27fed2df98d07e23904be2fce">getCpuId</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      uint32_t <a class="code" href="classaa_flash.html#a159bf215b0a04bd8d0a36ae1f5ec152b">getCpuClock</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}; <span class="comment">//class aaFlash</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">extern</span> <a class="code" href="classaa_flash.html">aaFlash</a> flashMem; <span class="comment">// Expose all public variables and methods for libraries.</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// End of precompiler protected code block.</span></div>
-<div class="ttc" id="aclassaa_flash_html"><div class="ttname"><a href="classaa_flash.html">aaFlash</a></div><div class="ttdef"><b>Definition:</b> aaFlash.h:36</div></div>
-<div class="ttc" id="aclassaa_flash_html_a159bf215b0a04bd8d0a36ae1f5ec152b"><div class="ttname"><a href="classaa_flash.html#a159bf215b0a04bd8d0a36ae1f5ec152b">aaFlash::getCpuClock</a></div><div class="ttdeci">uint32_t getCpuClock()</div><div class="ttdoc">Returns the clock speed of the application core in Mhz.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:120</div></div>
-<div class="ttc" id="aclassaa_flash_html_a2aafe9428776eeb0a6225d9b98aa58d8"><div class="ttname"><a href="classaa_flash.html#a2aafe9428776eeb0a6225d9b98aa58d8">aaFlash::getChipRevision</a></div><div class="ttdeci">uint8_t getChipRevision()</div><div class="ttdoc">Returns the revision number of the ESP32 chip.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:75</div></div>
-<div class="ttc" id="aclassaa_flash_html_a420c037bda3fb035fbb1ae692980bfa7"><div class="ttname"><a href="classaa_flash.html#a420c037bda3fb035fbb1ae692980bfa7">aaFlash::getFreeHeap</a></div><div class="ttdeci">uint32_t getFreeHeap()</div><div class="ttdoc">Returns number of bytes of sorted memory the program can use.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:93</div></div>
-<div class="ttc" id="aclassaa_flash_html_a4afeea61128a2992341981e34e3bf96d"><div class="ttname"><a href="classaa_flash.html#a4afeea61128a2992341981e34e3bf96d">aaFlash::getSerialSpeed</a></div><div class="ttdeci">uint32_t getSerialSpeed()</div><div class="ttdoc">Returns the current baud rate that the serial port is set to.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:102</div></div>
-<div class="ttc" id="aclassaa_flash_html_a5336ed26db363856d6c1fa1562668875"><div class="ttname"><a href="classaa_flash.html#a5336ed26db363856d6c1fa1562668875">aaFlash::getSDKVer</a></div><div class="ttdeci">const char * getSDKVer()</div><div class="ttdoc">Returns the version number of the SDK used to build the binary.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:57</div></div>
-<div class="ttc" id="aclassaa_flash_html_a6461c65d7ae0aa7803265c92002b18d9"><div class="ttname"><a href="classaa_flash.html#a6461c65d7ae0aa7803265c92002b18d9">aaFlash::getCodeSize</a></div><div class="ttdeci">uint32_t getCodeSize()</div><div class="ttdoc">Returns the size of the binary file in bytes.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:84</div></div>
-<div class="ttc" id="aclassaa_flash_html_a95384ed27fed2df98d07e23904be2fce"><div class="ttname"><a href="classaa_flash.html#a95384ed27fed2df98d07e23904be2fce">aaFlash::getCpuId</a></div><div class="ttdeci">uint32_t getCpuId()</div><div class="ttdoc">Returns the CPU ID of the application core.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:111</div></div>
-<div class="ttc" id="aclassaa_flash_html_acda3b58ea5d2e58e64c772a640dee50a"><div class="ttname"><a href="classaa_flash.html#acda3b58ea5d2e58e64c772a640dee50a">aaFlash::getChipModel</a></div><div class="ttdeci">const char * getChipModel()</div><div class="ttdoc">Returns the revision number of the ESP32 chip.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:66</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef aaFlash_h </span><span class="comment">// Start precompiler code block. </span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define aaFlash_h </span><span class="comment">// Precompiler macro used to avoid dupicate inclusion of this code.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/************************************************************************************</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * @section aaFlashIncludes Included libraries.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> ************************************************************************************/</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span> <span class="comment">// Arduino Core for ESP32. Comes with Platform.io.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;Preferences.h&gt;</span> <span class="comment">// Required for saving variables into Flash memory.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/************************************************************************************</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * @class Read/write to/from flash RAM.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> ************************************************************************************/</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classaa_flash.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaa_flash.html">aaFlash</a> <span class="comment">// Indicate that we are extending LiquidCrystal_I2C class with our class </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <a class="code" href="classaa_flash.html#a94a2822a455f5c0d39130305a78a952b">aaFlash</a>(); <span class="comment">// Default constructor for this class.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <a class="code" href="classaa_flash.html#a94a2822a455f5c0d39130305a78a952b">aaFlash</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* var1); <span class="comment">// Second form of class constructor.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <a class="code" href="classaa_flash.html#a40daf8addbf890ef3a37fbbabc639c50">~aaFlash</a>(); <span class="comment">// Class destructor.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      IPAddress <a class="code" href="classaa_flash.html#a0d386a02b7310a745db4358a1acf7b44">readBrokerIP</a>(); <span class="comment">// Read from flash memory.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="classaa_flash.html#aeab73dc549840e2e5edb2d901ee62c33">writeBrokerIP</a>(IPAddress address); <span class="comment">// Write to flash memory.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   <span class="keyword">private</span>: </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}; <span class="comment">//class aaFlash</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> <a class="code" href="classaa_flash.html">aaFlash</a> flashMem; <span class="comment">// Expose all public variables and methods for libraries.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// End of precompiler protected code block</span></div>
+<div class="ttc" id="aclassaa_flash_html"><div class="ttname"><a href="classaa_flash.html">aaFlash</a></div><div class="ttdef"><b>Definition:</b> aaFlash.h:18</div></div>
+<div class="ttc" id="aclassaa_flash_html_a0d386a02b7310a745db4358a1acf7b44"><div class="ttname"><a href="classaa_flash.html#a0d386a02b7310a745db4358a1acf7b44">aaFlash::readBrokerIP</a></div><div class="ttdeci">IPAddress readBrokerIP()</div><div class="ttdoc">Read MQTT broker IP address from flash memory.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:67</div></div>
+<div class="ttc" id="aclassaa_flash_html_a40daf8addbf890ef3a37fbbabc639c50"><div class="ttname"><a href="classaa_flash.html#a40daf8addbf890ef3a37fbbabc639c50">aaFlash::~aaFlash</a></div><div class="ttdeci">~aaFlash()</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:58</div></div>
+<div class="ttc" id="aclassaa_flash_html_a94a2822a455f5c0d39130305a78a952b"><div class="ttname"><a href="classaa_flash.html#a94a2822a455f5c0d39130305a78a952b">aaFlash::aaFlash</a></div><div class="ttdeci">aaFlash()</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:50</div></div>
+<div class="ttc" id="aclassaa_flash_html_aeab73dc549840e2e5edb2d901ee62c33"><div class="ttname"><a href="classaa_flash.html#aeab73dc549840e2e5edb2d901ee62c33">aaFlash::writeBrokerIP</a></div><div class="ttdeci">void writeBrokerIP(IPAddress address)</div><div class="ttdoc">Write MQTT broker IP address to flash memory.</div><div class="ttdef"><b>Definition:</b> aaFlash.cpp:83</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
