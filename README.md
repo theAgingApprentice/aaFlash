@@ -119,7 +119,7 @@ use TravisCI.
 
 ## Examples
 There is an 
-[example sketch](https://github.com/theAgingApprentice/aaChip/blob/main/examples/callAllExample/callAllExample.cpp) 
+[example sketch](https://github.com/theAgingApprentice/aaFlash/blob/main/examples/simpleExample/simpleExample.cpp) 
 that shows you how to use this class.   
 
 ## Acknowledgements
