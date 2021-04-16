@@ -40,84 +40,52 @@
  * IN THE SOFTWARE.  
  *****************************************************************************/
 #include <aaFlash.h> // Header file for linking.
+Preferences preferences; // Save to flash for variables to persist past reset.
+const char* DEFAULT_MQTT_IP = "192.168.0.99"; // Default IP address.
+const char* FLASH_APP_NAME = "my_app"; // Argument for flash read.
 
 /**
- * @class Retrieve microprocessor configuration details from both FreeRTOS and 
- * the ESP32 Arduino framework.
+ * @class Write variables to flash memory.
  * ==========================================================================*/
-aaFlash::aaFlash()
+aaFlash::aaFlash() 
 {
-
+   Serial.println("<aaFlash::aaFlash> Default constructor running.");
 } //aaFlash::aaFlash()
 
 /**
- * @brief Returns the version number of the SDK used to build the binary.
- * @return cont char* ESP.getSdkVersion()   
- * ==========================================================================*/
-const char* aaFlash::getSDKVer()
+ * @brief This is the destructor for this class.
+=============================================================================*/
+aaFlash::~aaFlash() 
 {
-   return ESP.getSdkVersion();
-} //aaFlash::getSDKVer()
+   Serial.println("<aaFlash::aaFlash> Destructor running.");
+} //aaFlash::aaFlash()
 
 /**
- * @brief Returns the revision number of the ESP32 chip.
- * @return uint32_t ESP.getChipRevision()   
- * ==========================================================================*/
-const char* aaFlash::getChipModel()
+ * @brief Read MQTT broker IP address from flash memory.
+ * @return IPAddress Value read from flash memory.
+=============================================================================*/
+IPAddress aaFlash::readBrokerIP()
 {
-   return ESP.getChipModel();
-} //aaFlash::getChipModel()
+   bool RW_MODE = false;
+   IPAddress addrIP; // Broker IP address in String format.
+   String addrStr; // Broker IP address in IPAddress format.
+   preferences.begin(FLASH_APP_NAME, RW_MODE); // Open flash in read/write mode.
+   addrStr = preferences.getString("brokerIP", DEFAULT_MQTT_IP).c_str(); // Read.
+   preferences.end(); // Close access to flash memory.
+   addrIP.fromString(addrStr); // Convert String to IPAddress format.
+   return addrIP;
+} //aaFlash::readBrokerIP()
 
 /**
- * @brief Returns the revision number of the ESP32 chip.
- * @return uint32_t ESP.getChipRevision()   
- * ==========================================================================*/
-uint8_t aaFlash::getChipRevision()
+ * @brief Write MQTT broker IP address to flash memory.
+ * @param IPAddress IP address to be written to flash memory.
+=============================================================================*/
+void aaFlash::writeBrokerIP(IPAddress address)
 {
-   return ESP.getChipRevision();
-} //aaFlash::getChipRevision()
-
-/**
- * @brief Returns the size of the binary file in bytes.
- * @return uint32_t ESP.getSketchSize()   
- * ==========================================================================*/
-uint32_t aaFlash::getCodeSize()
-{
-   return ESP.getSketchSize();
-} //aaFlash::getCodeSize()
-
-/**
- * @brief Returns number of bytes of sorted memory the program can use.
- * @return uint32_t ESP.getFreeHeap()   
- * ==========================================================================*/
-uint32_t aaFlash::getFreeHeap()
-{
-   return ESP.getFreeHeap();
-} //aaFlash::getFreeHeap()
-
-/**
- * @brief Returns the current baud rate that the serial port is set to.
- * @return uint32_t Serial.baudRate()   
- * ==========================================================================*/
-uint32_t aaFlash::getSerialSpeed()
-{
-   return Serial.baudRate();
-} //aaFlash::getSerialSpeed()
-
-/**
- * @brief Returns the CPU ID of the application core.
- * @return uint32_t xPortGetCoreID()   
- * ==========================================================================*/
-uint32_t aaFlash::getCpuId()
-{
-   return xPortGetCoreID();
-} //aaFlash::getCpuId()
-
-/**
- * @brief Returns the clock speed of the application core in Mhz.
- * @return uint32_t Serial.baudRate()   
- * ==========================================================================*/
-uint32_t aaFlash::getCpuClock()
-{
-   return getCpuFrequencyMhz();
-} //aaFlash::getCpuClock()
+   bool RW_MODE = false;
+   Serial.print("<aaFlash::write> Writing this address to flash memory: ");
+   Serial.println(address);
+   preferences.begin(FLASH_APP_NAME, RW_MODE); // Open flash in read/write mode.
+   preferences.putString("brokerIP", address.toString()); // Write IP address.
+   preferences.end(); // Close access to flash memory. 
+} //aaFlash::writeBrokerIP()
