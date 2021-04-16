@@ -5,18 +5,14 @@
  * 
  * @section intro_sec Introduction
  *
- * This is an example sketch provided with the aaChip library that shows how
- * to call all of the functions avaiable via this class and send the 
- * information to the serial console.
+ * This is an example sketch provided with the aaFlash library that shows how
+ * to read and write to flash memory so the information  is not lost during reboot.
  *
  * @section dependencies Dependencies
  * 
  * This sketch class depends on on the following libraries:
  * * <a href="https://github.com/espressif/arduino-esp32">Arduino.h</a>. This 
  * is the Arduino core library that comes bundled with PlatformIO.
- * * <a href="https://github.com/theAgingApprentice/aaChip">aaChip.h</a>. This 
- * is one of the Aging Apprentice's libraries. It exposes information about the 
- * microprocessor that is hosting the firmware. 
  *
  * @section author Author(s)
  *
@@ -43,12 +39,12 @@
  * IN THE SOFTWARE.  
  *****************************************************************************/ 
 #include <Arduino.h> // Arduino Core for ESP32. Comes with Platform.io.
-#include <aaFlash.h> // Required for retrieving CPU details.
+#include <aaFlash.h> // Store values that persist past reboot.
 
 /**
  * Define global objects.
  * =================================================================================*/
-aaFlash cmdQueue; // Instantiate the command queue.
+aaFlash flashMem; // Non-volatile memory management. 
 
 /**
  * @brief Initialize the serial output with the specified baud rate measured in bits 
@@ -66,50 +62,24 @@ void setupSerial()
  * =================================================================================*/
 void setup()
 {
-   char msg1[20] = "msg1";
-   char msg2[20] = "msg2";
-   char msg3[20] = "msg3";
-   char msg4[20] = "msg4";
-   char msg5[20] = "msg5";
-   char msg6[20] = "msg6";
-   char msg7[20] = "msg7";
-   char msg8[20] = "msg8";
+   IPAddress ip1, ip2, ip3; // Declare IPAddress varaibles.
+   IPAddress tmpIp1(0,0,0,0); // Declare and initialize IPAddress variable.
+   IPAddress tmpIp2(1,1,1,1); // Declare and initialize IPAddress variable.
+
    setupSerial(); // Set serial baud rate. 
    Serial.println("<setup> Start of setup");
-   Serial.println("<setup> Show buffer content before we start.");
-   cmdQueue.dumpBuffer();
-   Serial.println("<setup> Add a message to the buffer.");
-   cmdQueue.push(msg1);
-   cmdQueue.dumpBuffer();
-   Serial.println("<setup> Add a message to the buffer.");
-   cmdQueue.push(msg2);
-   cmdQueue.dumpBuffer();
-   Serial.println("<setup> Add a message to the buffer.");
-   cmdQueue.push(msg3);
-   cmdQueue.dumpBuffer();
-   Serial.println("<setup> Add a message to the buffer.");
-   cmdQueue.push(msg4);
-   cmdQueue.dumpBuffer();
-   Serial.println("<setup> Add a message to the buffer.");
-   cmdQueue.push(msg5);
-   cmdQueue.dumpBuffer();
-   Serial.println("<setup> Add a message to the buffer.");
-   cmdQueue.push(msg6);
-   cmdQueue.dumpBuffer();
-   Serial.println("<setup> Add a message to the buffer.");
-   cmdQueue.push(msg7);
-   cmdQueue.dumpBuffer();
-   Serial.println("<setup> Add a message to the buffer.");
-   cmdQueue.push(msg8);
-   cmdQueue.dumpBuffer();
-   Serial.println("<setup> Pull a message from the buffer.");
-   char str[cmdQueue.getMaxBufferSize()];
-   cmdQueue.pop(str);
-   cmdQueue.dumpBuffer();
-   Serial.print("<setup> myMessage = "); Serial.println(str);
-   Serial.println("<setup> Clear the buffer.");
-   cmdQueue.flush();
-   cmdQueue.dumpBuffer();
+
+   ip1 = flashMem.readBrokerIP(); // Read IP address from flash.
+   Serial.print("<simpleExample> IP Address = "); Serial.println(ip1);
+
+   flashMem.writeBrokerIP(tmpIp1); // Write IP address to flash.
+   ip2 = flashMem.readBrokerIP(); // Read IP address from flash.
+   Serial.print("<simpleExample> IP Address = "); Serial.println(ip2);
+
+   flashMem.writeBrokerIP(tmpIp2); // Write IP address to flash.
+   ip3 = flashMem.readBrokerIP(); // Read IP address from flash.
+   Serial.print("<simpleExample> IP Address = "); Serial.println(ip3);
+
    Serial.println("<setup> End of setup");
 } // setup()
 
